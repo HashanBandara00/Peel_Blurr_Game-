@@ -1,0 +1,49 @@
+body {
+    background-color: #0D1821;
+    font-family: Keania One;
+}
+
+.P-text {
+    color: white;
+    margin-left: 130px;
+}
+.perl-txt{
+    font-size: 60px;
+    margin-left: 37%;
+}
+.blur-txt{
+    font-size: 130px;
+    margin-left: 32%;
+}
+.phara {
+    color: white;
+    margin-left: 27%;
+    font-family: serif;
+    font-size: 35px;
+}
+.input-box{
+    width:300px;
+    padding:18px;
+    margin:15px 0;
+    border:none;
+    border-radius:40px;
+    background:#d3d3d3;
+    text-align:center;
+    font-size:18px;
+    margin-left: 540px;
+}
+
+.login-btn{
+    margin-top:30px;
+    padding:15px 60px;
+    border:none;
+    border-radius:40px;
+    background:#e6ef88;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-left: 610px;
+}
+.login-btn:hover{
+    background:#2bbbd5;
+}
