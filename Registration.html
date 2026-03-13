@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Keania+One&family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Registration.css">
+    <title>Regiter Page</title>
+</head>
+<body>
+
+    <div class="main-container">
+    <P class="P-text"><span class="perl-txt">Peel</span>
+        <br>
+        <span class="blur-txt">Blurr</span>
+    </P>
+    <p class="phara">“ Peel away the blur and join the adventure ”</p>
+    </div>
+
+    <div>
+
+     <form>
+
+        <input class="input-box" type="text" placeholder="Enter Username" required>
+        <br>
+        <input class="input-box" type="password" placeholder="Enter Password" required>
+        <br>
+        <input class="input-box" type="password" placeholder="Confirme Password" required>
+        <br>
+        <br>
+        <button class="login-btn" type="submit">Register</button>
+        <br>
+
+    </form>
+    </div>
+
+    <script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const username = document.querySelector('input[type="text"]').value.trim();
+    const password = document.querySelectorAll('input[type="password"]')[0].value.trim();
+    const confirmPassword = document.querySelectorAll('input[type="password"]')[1].value.trim();
+
+    if (!username || !password || !confirmPassword) {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    localStorage.setItem("registeredUsername", username);
+    localStorage.setItem("registeredPassword", password);
+
+    alert("Registration successful! Click OK to go to Login page.");
+
+    window.location.href = "LoginPage.html"; 
+});
+</script>
+
+</body>
+</html>
