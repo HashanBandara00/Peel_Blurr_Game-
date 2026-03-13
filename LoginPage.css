@@ -1,0 +1,53 @@
+body {
+    background-color: #0D1821;
+}
+p {
+    color: white;
+    font-family: Keania One;
+    text-align: center;
+}
+.perl-txt{
+    font-size: 60px;
+}
+.blur-txt{
+    font-size: 130px;
+}
+
+.input-box{
+    width:480px;
+    padding:18px;
+    margin:15px 0;
+    border:none;
+    border-radius:40px;
+    background:#d3d3d3;
+    text-align:center;
+    font-size:18px;
+    margin-left: 510px;
+}
+
+.login-btn{
+    margin-top:30px;
+    padding:15px 60px;
+    border:none;
+    border-radius:40px;
+    background:#e6ef88;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-left: 690px;
+}
+.login-btn:hover{
+    background:#F6FF99;
+}
+.Rg{
+    text-decoration: none;
+    
+}
+.register-link {
+    text-decoration: none;
+    color: white;
+}
+p.Rg{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
