@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="LoginPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Keania+One&family=Outfit&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <P><span class="perl-txt">Perl</span>
+    <br>
+    <span class="blur-txt">Blurr</span>
+    </P>
+    <br>
+    <div>
+
+     <form>
+
+        <input class="input-box" type="text" placeholder="Enter Username" required>
+        <br>
+        <input class="input-box" type="password" placeholder="Enter Password" required>
+        <p class="Rg">New Member ? <a href="Registration.html" class="register-link">Register here</a></p>
+        <br>
+        <br>
+        <button class="login-btn" type="submit">Login</button>
+        <br>
+
+    </form>
+    </div>
+
+<script>
+const loginForm = document.querySelector("form");
+
+loginForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const username = document.querySelector('input[type="text"]').value.trim();
+    const password = document.querySelector('input[type="password"]').value.trim();
+
+    // Get stored credentials
+    const registeredUsername = localStorage.getItem("registeredUsername");
+    const registeredPassword = localStorage.getItem("registeredPassword");
+
+    // Validation
+    if (!username || !password) {
+        alert("Please enter both username and password!");
+        return;
+    }
+
+    if (username === registeredUsername && password === registeredPassword) {
+        alert("Login successful!");
+        loginForm.reset();
+    } else {
+        alert("Invalid username or password!");
+    }
+});
+</script>
+    
+</body>
+</html>
